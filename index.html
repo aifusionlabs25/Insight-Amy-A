@@ -10,10 +10,10 @@
     :root {
       --paper: #f7f3f0;
       --paper-soft: #efe8e3;
-      --ink: #2f2521;
-      --muted: #766a64;
-      --line: rgba(73, 58, 52, .18);
-      --cocoa: #554640;
+      --ink: #ffffff;
+      --muted: #d9c0ce;
+      --line: rgba(255, 255, 255, .13);
+      --cocoa: #3a122a;
       --magenta: #d50057;
       --pink: #c0148f;
       --red: #f11d46;
@@ -32,12 +32,10 @@
       font-size: 14px;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
       background:
-        linear-gradient(90deg, rgba(85, 70, 64, .08) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(85, 70, 64, .06) 1px, transparent 1px),
-        radial-gradient(circle at 78% 4%, rgba(213, 0, 87, .18), transparent 27rem),
-        radial-gradient(circle at 14% 24%, rgba(241, 29, 70, .10), transparent 26rem),
-        var(--paper);
-      background-size: 72px 72px, 72px 72px, auto, auto, auto;
+        radial-gradient(circle at 50% 48%, rgba(184, 0, 91, .5), transparent 30rem),
+        radial-gradient(circle at 22% 28%, rgba(213, 0, 87, .34), transparent 28rem),
+        radial-gradient(circle at 82% 8%, rgba(99, 0, 60, .78), transparent 34rem),
+        linear-gradient(115deg, #7b003c 0%, #660035 46%, #36001f 100%);
     }
 
     body::before {
@@ -46,8 +44,12 @@
       inset: 0;
       pointer-events: none;
       background:
-        linear-gradient(110deg, transparent 0 58%, rgba(213, 0, 87, .08) 58% 59%, transparent 59%),
-        radial-gradient(circle at 100% 0%, rgba(18, 13, 16, .08), transparent 26rem);
+        radial-gradient(circle at 23% 56%, rgba(213, 0, 87, .22) 0 4rem, transparent 4.1rem),
+        radial-gradient(circle at 45% 97%, rgba(213, 0, 87, .2) 0 4rem, transparent 4.1rem),
+        linear-gradient(58deg, transparent 0 14%, rgba(213, 0, 87, .15) 14% 19%, transparent 19%),
+        linear-gradient(148deg, transparent 0 29%, rgba(213, 0, 87, .17) 29% 36%, transparent 36%),
+        linear-gradient(330deg, transparent 0 48%, rgba(213, 0, 87, .12) 48% 53%, transparent 53%);
+      opacity: .85;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -70,12 +72,12 @@
       padding: 9px 10px;
       border: 1px solid var(--line);
       border-radius: 16px;
-      background: rgba(247, 243, 240, .78);
+      background: rgba(34, 10, 27, .72);
       backdrop-filter: blur(18px);
       position: sticky;
       top: 8px;
       z-index: 10;
-      box-shadow: 0 22px 70px rgba(47, 37, 33, .13);
+      box-shadow: 0 22px 70px rgba(0, 0, 0, .22);
     }
 
     .brand {
@@ -99,7 +101,7 @@
 
     .brand b {
       display: block;
-      color: var(--ink);
+      color: white;
       font-size: 11px;
       letter-spacing: .08em;
       text-transform: uppercase;
@@ -126,8 +128,8 @@
       padding: 0 10px;
       border-radius: 999px;
       border: 1px solid var(--line);
-      background: rgba(255, 255, 255, .54);
-      color: var(--cocoa);
+      background: rgba(255, 255, 255, .08);
+      color: #f6dcea;
       font-size: 10px;
       font-weight: 900;
       white-space: nowrap;
@@ -150,8 +152,8 @@
       padding: 0 14px;
       border-radius: 10px;
       border: 1px solid var(--line);
-      color: var(--ink);
-      background: rgba(255, 255, 255, .52);
+      color: white;
+      background: rgba(34, 10, 27, .68);
       font-size: 12px;
       font-weight: 950;
       white-space: nowrap;
@@ -162,7 +164,7 @@
     .btn:hover {
       transform: translateY(-1px);
       border-color: rgba(213, 0, 87, .32);
-      background: white;
+      background: rgba(57, 17, 44, .9);
     }
 
     .btn.primary {
@@ -196,13 +198,41 @@
     .logo-lockup img {
       width: min(265px, 60vw);
       height: auto;
+      filter: brightness(0) invert(1) drop-shadow(0 14px 24px rgba(0, 0, 0, .28));
     }
+
+    .tool-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 18px;
+    }
+
+    .tool-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, .08);
+      color: white;
+      background: rgba(34, 10, 27, .72);
+      font-size: 12px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, .16);
+    }
+
+    .tool-btn .cyan { color: #00d9ff; }
+    .tool-btn .red { color: #ff687c; }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 9px;
-      color: var(--magenta);
+      color: #ff8aba;
       font-size: 10px;
       font-weight: 950;
       letter-spacing: .18em;
@@ -220,7 +250,7 @@
     }
 
     h1 {
-      color: var(--ink);
+      color: white;
       font-size: clamp(32px, 3.65vw, 50px);
       line-height: .98;
       letter-spacing: -.038em;
@@ -229,7 +259,7 @@
     }
 
     .lead {
-      color: #5f534d;
+      color: #ead7e2;
       font-size: clamp(13px, .98vw, 15px);
       line-height: 1.52;
       max-width: 620px;
@@ -242,7 +272,7 @@
       padding: 15px 16px;
       border: 1px solid var(--line);
       border-radius: 15px;
-      background: rgba(255, 255, 255, .58);
+      background: rgba(34, 10, 27, .58);
       margin: 18px 0;
       overflow: hidden;
     }
@@ -255,8 +285,8 @@
       background: linear-gradient(180deg, var(--magenta), var(--red));
     }
 
-    .client-card b { color: var(--ink); display: block; margin-bottom: 4px; }
-    .client-card span { color: var(--muted); line-height: 1.42; font-size: 13px; }
+    .client-card b { color: white; display: block; margin-bottom: 4px; }
+    .client-card span { color: #d9c0ce; line-height: 1.42; font-size: 13px; }
 
     .hero-actions {
       display: flex;
@@ -267,7 +297,7 @@
 
     .confidential {
       max-width: 600px;
-      color: #81756f;
+      color: #c7aabb;
       font-size: 11px;
       line-height: 1.45;
       border-left: 2px solid rgba(213, 0, 87, .38);
@@ -280,9 +310,9 @@
       max-height: 490px;
       border-radius: 24px;
       overflow: hidden;
-      border: 1px solid rgba(47, 37, 33, .18);
+      border: 1px solid rgba(255, 255, 255, .16);
       background: #160f12;
-      box-shadow: 0 55px 110px rgba(47, 37, 33, .25);
+      box-shadow: 0 55px 110px rgba(0, 0, 0, .34);
     }
 
     .demo-frame img {
@@ -379,12 +409,13 @@
       padding: clamp(20px, 3vw, 30px);
       border-radius: 23px;
       border: 1px solid var(--line);
-      background: rgba(255, 255, 255, .54);
-      box-shadow: 0 22px 70px rgba(47, 37, 33, .08);
+      background: rgba(34, 10, 27, .58);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 22px 70px rgba(0, 0, 0, .2);
     }
 
     .panel h2 {
-      color: var(--ink);
+      color: white;
       font-size: clamp(24px, 2.6vw, 34px);
       line-height: 1.02;
       letter-spacing: -.035em;
@@ -409,8 +440,8 @@
       align-items: start;
       padding: 14px;
       border-radius: 16px;
-      background: rgba(255, 255, 255, .56);
-      border: 1px solid rgba(73, 58, 52, .12);
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .09);
     }
 
     .check i {
@@ -425,8 +456,8 @@
       font-weight: 950;
     }
 
-    .check b { color: var(--ink); display: block; margin-bottom: 3px; }
-    .check span { color: var(--muted); line-height: 1.42; font-size: 13px; }
+    .check b { color: white; display: block; margin-bottom: 3px; }
+    .check span { color: #d9c0ce; line-height: 1.42; font-size: 13px; }
 
     .score-grid {
       display: grid;
@@ -438,8 +469,8 @@
     .score {
       padding: 17px;
       border-radius: 18px;
-      background: rgba(255, 255, 255, .56);
-      border: 1px solid rgba(73, 58, 52, .12);
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .09);
     }
 
     .score b {
@@ -465,8 +496,8 @@
       border-radius: 24px;
       color: white;
       background:
-        linear-gradient(135deg, rgba(213, 0, 87, .94), rgba(241, 29, 70, .9)),
-        var(--dark);
+        linear-gradient(135deg, rgba(213, 0, 87, .58), rgba(113, 14, 92, .72)),
+        rgba(34, 10, 27, .78);
       box-shadow: 0 30px 90px rgba(213, 0, 87, .2);
     }
 
@@ -506,6 +537,106 @@
       cursor: pointer;
     }
 
+    .search-shell {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: min(520px, 100%);
+      height: 100vh;
+      z-index: 28;
+      padding: 18px;
+      background: rgba(15, 17, 23, .96);
+      border-left: 1px solid rgba(255, 255, 255, .1);
+      box-shadow: -30px 0 90px rgba(0, 0, 0, .42);
+      color: white;
+      overflow: auto;
+    }
+
+    .search-shell.is-open { display: block; }
+
+    .search-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+      margin-bottom: 16px;
+    }
+
+    .search-head h2 {
+      font-size: 18px;
+      margin: 0 0 2px;
+    }
+
+    .search-head p {
+      color: #87e9ff;
+      font-size: 12px;
+      margin: 0;
+    }
+
+    .search-close {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, .12);
+      color: white;
+      background: rgba(255, 255, 255, .07);
+      cursor: pointer;
+    }
+
+    .search-box {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .search-box textarea {
+      width: 100%;
+      min-height: 112px;
+      resize: vertical;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 14px;
+      color: white;
+      background: #0f1117;
+      padding: 14px;
+      outline: 0;
+      font: inherit;
+    }
+
+    .result-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .result-card {
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    .result-card b {
+      display: block;
+      margin-bottom: 4px;
+      color: white;
+    }
+
+    .result-card span,
+    .result-card p {
+      color: #c9d3dd;
+      font-size: 12px;
+      line-height: 1.4;
+      margin: 0 0 8px;
+    }
+
+    .result-card a {
+      color: #00d9ff;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
     .modal {
       position: fixed;
       inset: 0;
@@ -524,8 +655,8 @@
       max-height: min(780px, calc(100vh - 44px));
       overflow: auto;
       border-radius: 23px;
-      border: 1px solid rgba(73, 58, 52, .16);
-      background: var(--paper);
+      border: 1px solid rgba(255, 255, 255, .16);
+      background: rgba(54, 19, 43, .96);
       box-shadow: 0 40px 120px rgba(18, 13, 16, .44);
     }
 
@@ -547,7 +678,7 @@
     }
 
     .modal h2 {
-      color: var(--ink);
+      color: white;
       font-size: clamp(24px, 3vw, 34px);
       line-height: 1;
       letter-spacing: -.035em;
@@ -555,7 +686,7 @@
     }
 
     .modal p {
-      color: var(--muted);
+      color: #d9c0ce;
       line-height: 1.48;
       margin-bottom: 0;
     }
@@ -568,8 +699,8 @@
       flex: 0 0 auto;
       border: 1px solid var(--line);
       border-radius: 50%;
-      color: var(--ink);
-      background: rgba(255, 255, 255, .7);
+      color: white;
+      background: rgba(255, 255, 255, .08);
       cursor: pointer;
       font-size: 20px;
       line-height: 1;
@@ -591,7 +722,7 @@
     .field.full { grid-column: 1 / -1; }
 
     .field label {
-      color: var(--ink);
+      color: white;
       font-size: 12px;
       font-weight: 900;
     }
@@ -602,8 +733,8 @@
       width: 100%;
       border: 1px solid var(--line);
       border-radius: 12px;
-      color: var(--ink);
-      background: rgba(255, 255, 255, .72);
+      color: white;
+      background: rgba(0, 0, 0, .28);
       padding: 12px 13px;
       font: inherit;
       outline: 0;
@@ -698,7 +829,12 @@
     <section class="hero">
       <div class="hero-copy">
         <div class="logo-lockup">
-          <img src="./assets/insight-logo.png" alt="Insight logo" />
+          <img src="./assets/insight-logo-final.png" alt="Insight Public Sector logo" />
+        </div>
+        <div class="tool-row" aria-label="Amy support tools">
+          <button class="tool-btn" type="button" data-open-review><span>□</span> Book Consultation</button>
+          <button class="tool-btn" type="button" data-open-review><span>✉</span> Contact</button>
+          <button class="tool-btn" type="button" data-open-search><span class="cyan">⌕</span> Search Assist</button>
         </div>
         <div class="eyebrow">Prepared for Insight Enterprises</div>
         <h1>Meet Amy, a general SDR-style X Agent built for first-pass discovery and qualified handoff.</h1>
@@ -830,12 +966,40 @@
     </div>
   </div>
 
+  <aside class="search-shell" id="search-shell" aria-label="Search Assist panel">
+    <div class="search-head">
+      <div>
+        <h2>Search Assist</h2>
+        <p>Inventory and part-number lookup demo</p>
+      </div>
+      <button class="search-close" type="button" aria-label="Close Search Assist" data-close-search>&times;</button>
+    </div>
+
+    <div class="search-box">
+      <textarea id="search-query" placeholder="Paste a part number, BOM line, or keywords. Example: C9200L-24T-4G-E"></textarea>
+      <button class="btn primary" type="button" id="search-submit">Search Insight catalog</button>
+    </div>
+
+    <div class="result-list" id="search-results">
+      <div class="result-card">
+        <b>Ready for lookup</b>
+        <p>Use this panel to show the same kind of Search Assist capability from the Tavus demo. In Anam, this can become either a client tool that opens this UI or a webhook tool that returns results to Amy.</p>
+      </div>
+    </div>
+  </aside>
+
   <script>
     const modal = document.getElementById('review-modal');
     const form = document.getElementById('review-form');
     const statusEl = document.getElementById('review-status');
     const openButtons = document.querySelectorAll('[data-open-review]');
     const closeButtons = document.querySelectorAll('[data-close-review]');
+    const searchShell = document.getElementById('search-shell');
+    const searchOpenButtons = document.querySelectorAll('[data-open-search]');
+    const searchCloseButtons = document.querySelectorAll('[data-close-search]');
+    const searchSubmit = document.getElementById('search-submit');
+    const searchQuery = document.getElementById('search-query');
+    const searchResults = document.getElementById('search-results');
 
     function openReviewForm() {
       modal.classList.add('is-open');
@@ -850,6 +1014,13 @@
 
     openButtons.forEach((button) => button.addEventListener('click', openReviewForm));
     closeButtons.forEach((button) => button.addEventListener('click', closeReviewForm));
+    searchOpenButtons.forEach((button) => button.addEventListener('click', () => {
+      searchShell.classList.add('is-open');
+      searchQuery.focus();
+    }));
+    searchCloseButtons.forEach((button) => button.addEventListener('click', () => {
+      searchShell.classList.remove('is-open');
+    }));
 
     modal.addEventListener('click', (event) => {
       if (event.target === modal) closeReviewForm();
@@ -857,6 +1028,41 @@
 
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && modal.classList.contains('is-open')) closeReviewForm();
+      if (event.key === 'Escape' && searchShell.classList.contains('is-open')) searchShell.classList.remove('is-open');
+    });
+
+    searchSubmit.addEventListener('click', async () => {
+      const queryText = searchQuery.value.trim();
+      if (!queryText) return;
+
+      searchResults.innerHTML = '<div class="result-card"><b>Searching...</b><p>Checking the demo catalog for matching Insight items.</p></div>';
+
+      try {
+        const response = await fetch('/api/search', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ queryText }),
+        });
+        const data = await response.json();
+
+        if (!response.ok) throw new Error(data.error || 'Search failed');
+
+        if (!data.matches || data.matches.length === 0) {
+          searchResults.innerHTML = '<div class="result-card"><b>No match found</b><p>Try a different manufacturer, part number, or keyword.</p></div>';
+          return;
+        }
+
+        searchResults.innerHTML = data.matches.map((item) => `
+          <div class="result-card">
+            <b>${item.title}</b>
+            <span>${item.manufacturer} | ${item.partNumber} | Confidence ${Math.round(item.confidence * 100)}%</span>
+            <p>${item.shortSpecs || ''}</p>
+            <a href="${item.url}" target="_blank" rel="noopener noreferrer">View on Insight.com</a>
+          </div>
+        `).join('');
+      } catch {
+        searchResults.innerHTML = '<div class="result-card"><b>Search unavailable</b><p>The lookup endpoint did not respond. Please try again shortly.</p></div>';
+      }
     });
 
     form.addEventListener('submit', async (event) => {
