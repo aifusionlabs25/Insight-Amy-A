@@ -59,24 +59,22 @@
 
     .page {
       position: relative;
-      width: min(1180px, calc(100% - 44px));
+      width: min(1080px, calc(100% - 44px));
       margin: 0 auto;
-      padding: 14px 0 38px;
+      padding: 12px 0 34px;
     }
 
     .screening-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 14px;
-      padding: 9px 10px;
+      gap: 12px;
+      padding: 6px 8px;
       border: 1px solid var(--line);
-      border-radius: 16px;
+      border-radius: 14px;
       background: rgba(34, 10, 27, .72);
       backdrop-filter: blur(18px);
-      position: sticky;
-      top: 8px;
-      z-index: 10;
+      position: static;
       box-shadow: 0 22px 70px rgba(0, 0, 0, .22);
     }
 
@@ -88,13 +86,14 @@
     }
 
     .mark {
-      width: 31px;
-      height: 31px;
+      width: 26px;
+      height: 26px;
       border-radius: 10px;
       display: grid;
       place-items: center;
       color: white;
       font-weight: 950;
+      font-size: 13px;
       background: linear-gradient(135deg, var(--magenta), var(--red));
       box-shadow: 0 16px 34px rgba(213, 0, 87, .28);
     }
@@ -102,7 +101,7 @@
     .brand b {
       display: block;
       color: white;
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: .08em;
       text-transform: uppercase;
     }
@@ -110,7 +109,7 @@
     .brand span {
       display: block;
       color: var(--muted);
-      font-size: 10px;
+      font-size: 9px;
       margin-top: 2px;
     }
 
@@ -124,7 +123,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      min-height: 30px;
+      min-height: 28px;
       padding: 0 10px;
       border-radius: 999px;
       border: 1px solid var(--line);
@@ -148,13 +147,13 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 36px;
-      padding: 0 14px;
+      min-height: 32px;
+      padding: 0 12px;
       border-radius: 10px;
       border: 1px solid var(--line);
       color: white;
       background: rgba(34, 10, 27, .68);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 950;
       white-space: nowrap;
       cursor: pointer;
@@ -182,51 +181,24 @@
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, .92fr) minmax(380px, 1.08fr);
-      gap: clamp(24px, 3.5vw, 44px);
+      grid-template-columns: minmax(0, .88fr) minmax(360px, 1.12fr);
+      gap: clamp(22px, 3vw, 36px);
       align-items: start;
-      padding: 34px 0 24px;
+      padding: 28px 0 22px;
     }
 
     .logo-lockup {
       display: flex;
       align-items: center;
       gap: 14px;
-      margin-bottom: 22px;
+      margin-bottom: 17px;
     }
 
     .logo-lockup img {
-      width: min(265px, 60vw);
+      width: min(230px, 58vw);
       height: auto;
       filter: brightness(0) invert(1) drop-shadow(0 14px 24px rgba(0, 0, 0, .28));
     }
-
-    .tool-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 0 0 18px;
-    }
-
-    .tool-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      min-height: 40px;
-      padding: 0 14px;
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, .08);
-      color: white;
-      background: rgba(34, 10, 27, .72);
-      font-size: 12px;
-      font-weight: 900;
-      cursor: pointer;
-      box-shadow: 0 14px 34px rgba(0, 0, 0, .16);
-    }
-
-    .tool-btn .cyan { color: #00d9ff; }
-    .tool-btn .red { color: #ff687c; }
 
     .eyebrow {
       display: inline-flex;
@@ -251,8 +223,8 @@
 
     h1 {
       color: white;
-      font-size: clamp(32px, 3.65vw, 50px);
-      line-height: .98;
+      font-size: clamp(30px, 3.2vw, 43px);
+      line-height: 1;
       letter-spacing: -.038em;
       margin-bottom: 15px;
       max-width: 680px;
@@ -260,7 +232,7 @@
 
     .lead {
       color: #ead7e2;
-      font-size: clamp(13px, .98vw, 15px);
+      font-size: clamp(13px, .92vw, 14px);
       line-height: 1.52;
       max-width: 620px;
       margin-bottom: 18px;
@@ -306,9 +278,9 @@
 
     .demo-frame {
       position: relative;
-      min-height: 392px;
-      max-height: 490px;
-      border-radius: 24px;
+      min-height: 360px;
+      max-height: 440px;
+      border-radius: 22px;
       overflow: hidden;
       border: 1px solid rgba(255, 255, 255, .16);
       background: #160f12;
@@ -317,7 +289,7 @@
 
     .demo-frame img {
       width: 100%;
-      height: clamp(392px, 45vh, 490px);
+      height: clamp(360px, 42vh, 440px);
       object-fit: cover;
       object-position: center 39%;
       filter: saturate(.96) contrast(1.02);
@@ -335,7 +307,7 @@
 
     .play {
       position: absolute;
-      top: 42%;
+      top: 45%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 2;
@@ -355,11 +327,12 @@
     .demo-panel {
       position: absolute;
       z-index: 2;
-      left: 20px;
-      right: 20px;
-      bottom: 20px;
-      padding: 18px 18px;
-      border-radius: 18px;
+      left: 14px;
+      right: auto;
+      bottom: 14px;
+      width: min(390px, calc(100% - 28px));
+      padding: 13px 14px;
+      border-radius: 15px;
       border: 1px solid rgba(255, 255, 255, .16);
       background: rgba(18, 13, 16, .78);
       backdrop-filter: blur(18px);
@@ -367,7 +340,7 @@
 
     .demo-panel h2 {
       color: white;
-      font-size: 22px;
+      font-size: 18px;
       letter-spacing: -.02em;
       margin-bottom: 6px;
     }
@@ -375,27 +348,8 @@
     .demo-panel p {
       color: #ddd2cd;
       line-height: 1.42;
-      margin-bottom: 14px;
-      font-size: 13px;
-    }
-
-    .flow {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 9px;
-    }
-
-    .flow div {
-      min-height: 39px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 0 8px;
-      border-radius: 12px;
-      color: white;
-      background: rgba(255, 255, 255, .09);
-      font-size: 11px;
-      font-weight: 900;
+      margin-bottom: 0;
+      font-size: 12px;
     }
 
     .sections {
@@ -406,7 +360,7 @@
     }
 
     .panel {
-      padding: clamp(20px, 3vw, 30px);
+      padding: clamp(18px, 2.4vw, 24px);
       border-radius: 23px;
       border: 1px solid var(--line);
       background: rgba(34, 10, 27, .58);
@@ -416,7 +370,7 @@
 
     .panel h2 {
       color: white;
-      font-size: clamp(24px, 2.6vw, 34px);
+      font-size: clamp(22px, 2.2vw, 29px);
       line-height: 1.02;
       letter-spacing: -.035em;
       margin-bottom: 10px;
@@ -535,106 +489,6 @@
       font-size: 12px;
       font-weight: 900;
       cursor: pointer;
-    }
-
-    .search-shell {
-      display: none;
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: min(520px, 100%);
-      height: 100vh;
-      z-index: 28;
-      padding: 18px;
-      background: rgba(15, 17, 23, .96);
-      border-left: 1px solid rgba(255, 255, 255, .1);
-      box-shadow: -30px 0 90px rgba(0, 0, 0, .42);
-      color: white;
-      overflow: auto;
-    }
-
-    .search-shell.is-open { display: block; }
-
-    .search-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid rgba(255, 255, 255, .08);
-      margin-bottom: 16px;
-    }
-
-    .search-head h2 {
-      font-size: 18px;
-      margin: 0 0 2px;
-    }
-
-    .search-head p {
-      color: #87e9ff;
-      font-size: 12px;
-      margin: 0;
-    }
-
-    .search-close {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, .12);
-      color: white;
-      background: rgba(255, 255, 255, .07);
-      cursor: pointer;
-    }
-
-    .search-box {
-      display: grid;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-
-    .search-box textarea {
-      width: 100%;
-      min-height: 112px;
-      resize: vertical;
-      border: 1px solid rgba(255, 255, 255, .12);
-      border-radius: 14px;
-      color: white;
-      background: #0f1117;
-      padding: 14px;
-      outline: 0;
-      font: inherit;
-    }
-
-    .result-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .result-card {
-      padding: 14px;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, .07);
-      border: 1px solid rgba(255, 255, 255, .1);
-    }
-
-    .result-card b {
-      display: block;
-      margin-bottom: 4px;
-      color: white;
-    }
-
-    .result-card span,
-    .result-card p {
-      color: #c9d3dd;
-      font-size: 12px;
-      line-height: 1.4;
-      margin: 0 0 8px;
-    }
-
-    .result-card a {
-      color: #00d9ff;
-      font-size: 12px;
-      font-weight: 900;
     }
 
     .modal {
@@ -777,7 +631,7 @@
 
     @media (max-width: 620px) {
       .page { width: min(100% - 28px, 1380px); padding-top: 12px; }
-      .screening-bar { align-items: flex-start; top: 8px; border-radius: 16px; padding: 9px; }
+      .screening-bar { align-items: flex-start; border-radius: 16px; padding: 9px; }
       .bar-actions .pill { display: none; }
       .brand b { font-size: 12px; letter-spacing: .05em; }
       .brand span { font-size: 11px; }
@@ -791,14 +645,13 @@
       .client-card { padding: 14px; border-radius: 18px; margin: 20px 0; }
       .client-card span { font-size: 13px; }
       .btn { min-height: 44px; border-radius: 13px; }
-      .hero-actions, .flow, .score-grid { grid-template-columns: 1fr; display: grid; }
+      .hero-actions, .score-grid { grid-template-columns: 1fr; display: grid; }
       .hero-actions .btn { width: 100%; }
       .demo-frame, .demo-frame img { min-height: 440px; height: 440px; }
       .play { width: 72px; height: 72px; }
-      .flow { grid-template-columns: repeat(2, 1fr); }
-      .demo-panel { left: 14px; right: 14px; bottom: 14px; padding: 16px; border-radius: 20px; }
-      .demo-panel h2 { font-size: 20px; }
-      .demo-panel p { font-size: 14px; }
+      .demo-panel { left: 12px; right: 12px; bottom: 12px; width: auto; padding: 13px; border-radius: 16px; }
+      .demo-panel h2 { font-size: 18px; }
+      .demo-panel p { font-size: 13px; }
       .panel { border-radius: 22px; }
       .panel h2 { font-size: 24px; line-height: 1.04; }
       .footer-cta { border-radius: 24px; }
@@ -829,12 +682,7 @@
     <section class="hero">
       <div class="hero-copy">
         <div class="logo-lockup">
-          <img src="./assets/insight-logo-final.png" alt="Insight Public Sector logo" />
-        </div>
-        <div class="tool-row" aria-label="Amy support tools">
-          <button class="tool-btn" type="button" data-open-review><span>□</span> Book Consultation</button>
-          <button class="tool-btn" type="button" data-open-review><span>✉</span> Contact</button>
-          <button class="tool-btn" type="button" data-open-search><span class="cyan">⌕</span> Search Assist</button>
+          <img src="./assets/insight-logo.png" alt="Insight logo" />
         </div>
         <div class="eyebrow">Prepared for Insight Enterprises</div>
         <h1>Meet Amy, a general SDR-style X Agent built for first-pass discovery and qualified handoff.</h1>
@@ -850,7 +698,7 @@
         <div class="hero-actions">
           <a class="btn primary" href="https://xagent.aifusionlabs.app/demo/amy?returnUrl=https%3A%2F%2Finsight-amy-a.vercel.app%2F">Review Amy</a>
           <a class="btn" href="#test">What to test</a>
-          <button class="btn dark" type="button" data-open-review>Send review notes</button>
+          <button class="btn dark" type="button" data-open-review>More info request</button>
         </div>
 
         <p class="confidential">Private preview page. This concept is unlisted and intended only for Insight leadership or reviewers evaluating Amy's proposed SDR workflow.</p>
@@ -861,13 +709,7 @@
         <a class="play" aria-label="Launch Amy private demo" href="https://xagent.aifusionlabs.app/demo/amy?returnUrl=https%3A%2F%2Finsight-amy-a.vercel.app%2F">&#9654;</a>
         <div class="demo-panel">
           <h2>Private Amy demo</h2>
-          <p>Simulate an inbound prospect asking about services, modernization, AI, security, public sector procurement, or routing to a specialist.</p>
-          <div class="flow">
-            <div>Prospect need</div>
-            <div>Discovery</div>
-            <div>Qualification</div>
-            <div>Team routing</div>
-          </div>
+          <p>Review how Amy handles first-pass discovery and routes next steps without forcing every early question onto a human SDR.</p>
         </div>
       </div>
     </section>
@@ -912,10 +754,10 @@
         <p>Send feedback, flag missing Insight context, or request a short review discussion with AI Fusion Labs.</p>
         <div class="contact-strip" aria-label="Private follow-up options">
           <button class="contact-chip" type="button" data-open-review>Email AI Fusion Labs</button>
-          <button class="contact-chip" type="button" data-open-review>Send Amy feedback</button>
+          <button class="contact-chip" type="button" data-open-review>Request Amy details</button>
         </div>
       </div>
-      <button class="btn dark" type="button" data-open-review>Send review notes</button>
+      <button class="btn dark" type="button" data-open-review>More info request</button>
     </section>
   </main>
 
@@ -923,9 +765,9 @@
     <div class="modal-card">
       <div class="modal-head">
         <div>
-          <div class="modal-kicker">Private review request</div>
-          <h2 id="review-title">Send Amy review notes</h2>
-          <p>Share contact details and feedback for Amy. AI Fusion Labs will follow up directly with next steps.</p>
+          <div class="modal-kicker">More info request</div>
+          <h2 id="review-title">Request more information</h2>
+          <p>Share your contact details and any questions about Amy. AI Fusion Labs will follow up directly.</p>
         </div>
         <button class="modal-close" type="button" aria-label="Close review form" data-close-review>&times;</button>
       </div>
@@ -938,16 +780,16 @@
           </div>
           <div class="field">
             <label for="review-email">Email</label>
-            <input id="review-email" name="email" type="email" autocomplete="email" required value="Talal.khan@insight.com" />
+            <input id="review-email" name="email" type="email" autocomplete="email" required placeholder="Your email" />
           </div>
           <div class="field full">
             <label for="review-company">Company / Role</label>
-            <input id="review-company" name="company" type="text" autocomplete="organization" required value="Insight Enterprises / Reviewer" />
+            <input id="review-company" name="company" type="text" autocomplete="organization" required placeholder="Company / role" />
           </div>
           <div class="field full">
             <label for="review-usecase">Primary Use Case</label>
             <select id="review-usecase" name="useCase" required>
-              <option value="Amy SDR Review">Amy SDR review</option>
+              <option value="More Info Request">More info request</option>
               <option value="Inbound Discovery">Inbound discovery</option>
               <option value="Public Sector Routing">Public sector routing</option>
               <option value="AI / Cloud / Security Specialist Routing">AI, cloud, or security routing</option>
@@ -961,32 +803,10 @@
         </div>
 
         <div class="form-status" id="review-status" aria-live="polite"></div>
-        <button class="btn primary" type="submit">Send review request</button>
+        <button class="btn primary" type="submit">Send more info request</button>
       </form>
     </div>
   </div>
-
-  <aside class="search-shell" id="search-shell" aria-label="Search Assist panel">
-    <div class="search-head">
-      <div>
-        <h2>Search Assist</h2>
-        <p>Inventory and part-number lookup demo</p>
-      </div>
-      <button class="search-close" type="button" aria-label="Close Search Assist" data-close-search>&times;</button>
-    </div>
-
-    <div class="search-box">
-      <textarea id="search-query" placeholder="Paste a part number, BOM line, or keywords. Example: C9200L-24T-4G-E"></textarea>
-      <button class="btn primary" type="button" id="search-submit">Search Insight catalog</button>
-    </div>
-
-    <div class="result-list" id="search-results">
-      <div class="result-card">
-        <b>Ready for lookup</b>
-        <p>Use this panel to show the same kind of Search Assist capability from the Tavus demo. In Anam, this can become either a client tool that opens this UI or a webhook tool that returns results to Amy.</p>
-      </div>
-    </div>
-  </aside>
 
   <script>
     const modal = document.getElementById('review-modal');
@@ -994,14 +814,9 @@
     const statusEl = document.getElementById('review-status');
     const openButtons = document.querySelectorAll('[data-open-review]');
     const closeButtons = document.querySelectorAll('[data-close-review]');
-    const searchShell = document.getElementById('search-shell');
-    const searchOpenButtons = document.querySelectorAll('[data-open-search]');
-    const searchCloseButtons = document.querySelectorAll('[data-close-search]');
-    const searchSubmit = document.getElementById('search-submit');
-    const searchQuery = document.getElementById('search-query');
-    const searchResults = document.getElementById('search-results');
 
     function openReviewForm() {
+      form.reset();
       modal.classList.add('is-open');
       statusEl.textContent = '';
       statusEl.className = 'form-status';
@@ -1009,18 +824,14 @@
     }
 
     function closeReviewForm() {
+      form.reset();
+      statusEl.textContent = '';
+      statusEl.className = 'form-status';
       modal.classList.remove('is-open');
     }
 
     openButtons.forEach((button) => button.addEventListener('click', openReviewForm));
     closeButtons.forEach((button) => button.addEventListener('click', closeReviewForm));
-    searchOpenButtons.forEach((button) => button.addEventListener('click', () => {
-      searchShell.classList.add('is-open');
-      searchQuery.focus();
-    }));
-    searchCloseButtons.forEach((button) => button.addEventListener('click', () => {
-      searchShell.classList.remove('is-open');
-    }));
 
     modal.addEventListener('click', (event) => {
       if (event.target === modal) closeReviewForm();
@@ -1028,46 +839,11 @@
 
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && modal.classList.contains('is-open')) closeReviewForm();
-      if (event.key === 'Escape' && searchShell.classList.contains('is-open')) searchShell.classList.remove('is-open');
-    });
-
-    searchSubmit.addEventListener('click', async () => {
-      const queryText = searchQuery.value.trim();
-      if (!queryText) return;
-
-      searchResults.innerHTML = '<div class="result-card"><b>Searching...</b><p>Checking the demo catalog for matching Insight items.</p></div>';
-
-      try {
-        const response = await fetch('/api/search', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ queryText }),
-        });
-        const data = await response.json();
-
-        if (!response.ok) throw new Error(data.error || 'Search failed');
-
-        if (!data.matches || data.matches.length === 0) {
-          searchResults.innerHTML = '<div class="result-card"><b>No match found</b><p>Try a different manufacturer, part number, or keyword.</p></div>';
-          return;
-        }
-
-        searchResults.innerHTML = data.matches.map((item) => `
-          <div class="result-card">
-            <b>${item.title}</b>
-            <span>${item.manufacturer} | ${item.partNumber} | Confidence ${Math.round(item.confidence * 100)}%</span>
-            <p>${item.shortSpecs || ''}</p>
-            <a href="${item.url}" target="_blank" rel="noopener noreferrer">View on Insight.com</a>
-          </div>
-        `).join('');
-      } catch {
-        searchResults.innerHTML = '<div class="result-card"><b>Search unavailable</b><p>The lookup endpoint did not respond. Please try again shortly.</p></div>';
-      }
     });
 
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
-      statusEl.textContent = 'Sending review request...';
+      statusEl.textContent = 'Sending more info request...';
       statusEl.className = 'form-status';
 
       const formData = new FormData(form);
@@ -1082,11 +858,7 @@
 
         if (!response.ok) throw new Error('Request failed');
 
-        form.reset();
-        document.getElementById('review-email').value = 'Talal.khan@insight.com';
-        document.getElementById('review-company').value = 'Insight Enterprises / Reviewer';
-        statusEl.textContent = 'Review request sent. AI Fusion Labs will follow up directly.';
-        statusEl.className = 'form-status success';
+        closeReviewForm();
       } catch {
         statusEl.textContent = 'Could not send yet. Please try again in a moment.';
         statusEl.className = 'form-status error';
