@@ -1,0 +1,15 @@
+.env
+.env.*
+.vercel
+node_modules
+.DS_Store
+*.log
+
+# Keep private source material out of this public review page repo.
+KB Files/
+Tavus Files/
+*.zip
+*.txt
+*.docx
+*.pdf
+*.md

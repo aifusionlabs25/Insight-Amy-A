@@ -1,0 +1,891 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Amy | Private Screening Room for Insight</title>
+  <meta name="description" content="Private X Agent screening room prepared for Insight Enterprises." />
+  <style>
+    :root {
+      --paper: #f7f3f0;
+      --paper-soft: #efe8e3;
+      --ink: #2f2521;
+      --muted: #766a64;
+      --line: rgba(73, 58, 52, .18);
+      --cocoa: #554640;
+      --magenta: #d50057;
+      --pink: #c0148f;
+      --red: #f11d46;
+      --blue: #1f77ff;
+      --green: #18c789;
+      --dark: #120d10;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-size: 14px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
+      background:
+        linear-gradient(90deg, rgba(85, 70, 64, .08) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(85, 70, 64, .06) 1px, transparent 1px),
+        radial-gradient(circle at 78% 4%, rgba(213, 0, 87, .18), transparent 27rem),
+        radial-gradient(circle at 14% 24%, rgba(241, 29, 70, .10), transparent 26rem),
+        var(--paper);
+      background-size: 72px 72px, 72px 72px, auto, auto, auto;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(110deg, transparent 0 58%, rgba(213, 0, 87, .08) 58% 59%, transparent 59%),
+        radial-gradient(circle at 100% 0%, rgba(18, 13, 16, .08), transparent 26rem);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button { font: inherit; }
+    h1, h2, h3, p { margin-top: 0; }
+
+    .page {
+      position: relative;
+      width: min(1180px, calc(100% - 44px));
+      margin: 0 auto;
+      padding: 14px 0 38px;
+    }
+
+    .screening-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      padding: 9px 10px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(247, 243, 240, .78);
+      backdrop-filter: blur(18px);
+      position: sticky;
+      top: 8px;
+      z-index: 10;
+      box-shadow: 0 22px 70px rgba(47, 37, 33, .13);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 31px;
+      height: 31px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 950;
+      background: linear-gradient(135deg, var(--magenta), var(--red));
+      box-shadow: 0 16px 34px rgba(213, 0, 87, .28);
+    }
+
+    .brand b {
+      display: block;
+      color: var(--ink);
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--muted);
+      font-size: 10px;
+      margin-top: 2px;
+    }
+
+    .bar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 30px;
+      padding: 0 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .54);
+      color: var(--cocoa);
+      font-size: 10px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .pill::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 15px rgba(24, 199, 137, .8);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 36px;
+      padding: 0 14px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: rgba(255, 255, 255, .52);
+      font-size: 12px;
+      font-weight: 950;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(213, 0, 87, .32);
+      background: white;
+    }
+
+    .btn.primary {
+      border: 0;
+      color: white;
+      background: linear-gradient(135deg, var(--magenta), var(--red));
+      box-shadow: 0 18px 42px rgba(213, 0, 87, .28);
+    }
+
+    .btn.dark {
+      color: white;
+      border: 0;
+      background: var(--dark);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, .92fr) minmax(380px, 1.08fr);
+      gap: clamp(24px, 3.5vw, 44px);
+      align-items: start;
+      padding: 34px 0 24px;
+    }
+
+    .logo-lockup {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .logo-lockup img {
+      width: min(265px, 60vw);
+      height: auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--magenta);
+      font-size: 10px;
+      font-weight: 950;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 13px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--magenta);
+      box-shadow: 0 0 18px rgba(213, 0, 87, .62);
+    }
+
+    h1 {
+      color: var(--ink);
+      font-size: clamp(32px, 3.65vw, 50px);
+      line-height: .98;
+      letter-spacing: -.038em;
+      margin-bottom: 15px;
+      max-width: 680px;
+    }
+
+    .lead {
+      color: #5f534d;
+      font-size: clamp(13px, .98vw, 15px);
+      line-height: 1.52;
+      max-width: 620px;
+      margin-bottom: 18px;
+    }
+
+    .client-card {
+      position: relative;
+      width: min(100%, 540px);
+      padding: 15px 16px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: rgba(255, 255, 255, .58);
+      margin: 18px 0;
+      overflow: hidden;
+    }
+
+    .client-card::after {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--magenta), var(--red));
+    }
+
+    .client-card b { color: var(--ink); display: block; margin-bottom: 4px; }
+    .client-card span { color: var(--muted); line-height: 1.42; font-size: 13px; }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 17px;
+    }
+
+    .confidential {
+      max-width: 600px;
+      color: #81756f;
+      font-size: 11px;
+      line-height: 1.45;
+      border-left: 2px solid rgba(213, 0, 87, .38);
+      padding-left: 14px;
+    }
+
+    .demo-frame {
+      position: relative;
+      min-height: 392px;
+      max-height: 490px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(47, 37, 33, .18);
+      background: #160f12;
+      box-shadow: 0 55px 110px rgba(47, 37, 33, .25);
+    }
+
+    .demo-frame img {
+      width: 100%;
+      height: clamp(392px, 45vh, 490px);
+      object-fit: cover;
+      object-position: center 39%;
+      filter: saturate(.96) contrast(1.02);
+    }
+
+    .demo-frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(18, 13, 16, 0) 38%, rgba(18, 13, 16, .88) 100%),
+        linear-gradient(90deg, rgba(18, 13, 16, .32), transparent 48%);
+    }
+
+    .play {
+      position: absolute;
+      top: 42%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: rgba(255, 255, 255, .9);
+      background: rgba(18, 13, 16, .38);
+      border: 1px solid rgba(255, 255, 255, .34);
+      backdrop-filter: blur(14px);
+      font-size: 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, .32);
+    }
+
+    .demo-panel {
+      position: absolute;
+      z-index: 2;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      padding: 18px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      background: rgba(18, 13, 16, .78);
+      backdrop-filter: blur(18px);
+    }
+
+    .demo-panel h2 {
+      color: white;
+      font-size: 22px;
+      letter-spacing: -.02em;
+      margin-bottom: 6px;
+    }
+
+    .demo-panel p {
+      color: #ddd2cd;
+      line-height: 1.42;
+      margin-bottom: 14px;
+      font-size: 13px;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 9px;
+    }
+
+    .flow div {
+      min-height: 39px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 0 8px;
+      border-radius: 12px;
+      color: white;
+      background: rgba(255, 255, 255, .09);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .sections {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 8px;
+    }
+
+    .panel {
+      padding: clamp(20px, 3vw, 30px);
+      border-radius: 23px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .54);
+      box-shadow: 0 22px 70px rgba(47, 37, 33, .08);
+    }
+
+    .panel h2 {
+      color: var(--ink);
+      font-size: clamp(24px, 2.6vw, 34px);
+      line-height: 1.02;
+      letter-spacing: -.035em;
+      margin-bottom: 10px;
+    }
+
+    .panel p {
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+
+    .checklist {
+      display: grid;
+      gap: 11px;
+    }
+
+    .check {
+      display: grid;
+      grid-template-columns: 34px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, .56);
+      border: 1px solid rgba(73, 58, 52, .12);
+    }
+
+    .check i {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      color: white;
+      background: var(--magenta);
+      font-style: normal;
+      font-weight: 950;
+    }
+
+    .check b { color: var(--ink); display: block; margin-bottom: 3px; }
+    .check span { color: var(--muted); line-height: 1.42; font-size: 13px; }
+
+    .score-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .score {
+      padding: 17px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, .56);
+      border: 1px solid rgba(73, 58, 52, .12);
+    }
+
+    .score b {
+      display: block;
+      color: var(--magenta);
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    .score span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .footer-cta {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: center;
+      margin-top: 18px;
+      padding: clamp(22px, 3vw, 34px);
+      border-radius: 24px;
+      color: white;
+      background:
+        linear-gradient(135deg, rgba(213, 0, 87, .94), rgba(241, 29, 70, .9)),
+        var(--dark);
+      box-shadow: 0 30px 90px rgba(213, 0, 87, .2);
+    }
+
+    .footer-cta h2 {
+      color: white;
+      font-size: clamp(24px, 3vw, 38px);
+      line-height: 1;
+      letter-spacing: -.04em;
+      margin-bottom: 8px;
+    }
+
+    .footer-cta p {
+      color: rgba(255, 255, 255, .82);
+      margin-bottom: 0;
+      line-height: 1.45;
+    }
+
+    .contact-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .contact-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .22);
+      color: white;
+      background: rgba(255, 255, 255, .12);
+      font-size: 12px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      place-items: center;
+      padding: 22px;
+      background: rgba(18, 13, 16, .64);
+      backdrop-filter: blur(18px);
+      z-index: 30;
+    }
+
+    .modal.is-open { display: grid; }
+
+    .modal-card {
+      width: min(100%, 650px);
+      max-height: min(780px, calc(100vh - 44px));
+      overflow: auto;
+      border-radius: 23px;
+      border: 1px solid rgba(73, 58, 52, .16);
+      background: var(--paper);
+      box-shadow: 0 40px 120px rgba(18, 13, 16, .44);
+    }
+
+    .modal-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+      padding: 24px 24px 0;
+    }
+
+    .modal-kicker {
+      color: var(--magenta);
+      font-size: 10px;
+      font-weight: 950;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .modal h2 {
+      color: var(--ink);
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1;
+      letter-spacing: -.035em;
+      margin-bottom: 8px;
+    }
+
+    .modal p {
+      color: var(--muted);
+      line-height: 1.48;
+      margin-bottom: 0;
+    }
+
+    .modal-close {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--ink);
+      background: rgba(255, 255, 255, .7);
+      cursor: pointer;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .review-form {
+      display: grid;
+      gap: 15px;
+      padding: 22px 24px 24px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .field { display: grid; gap: 7px; }
+    .field.full { grid-column: 1 / -1; }
+
+    .field label {
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--ink);
+      background: rgba(255, 255, 255, .72);
+      padding: 12px 13px;
+      font: inherit;
+      outline: 0;
+    }
+
+    .field textarea {
+      min-height: 104px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: rgba(213, 0, 87, .56);
+      box-shadow: 0 0 0 3px rgba(213, 0, 87, .1);
+    }
+
+    .form-status {
+      min-height: 18px;
+      color: var(--cocoa);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .form-status.success { color: #07885d; }
+    .form-status.error { color: #c82727; }
+
+    @media (min-width: 981px) {
+      .screening-bar {
+        width: min(100%, 940px);
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero, .sections, .footer-cta { grid-template-columns: 1fr; }
+      .demo-frame, .demo-frame img { min-height: 470px; height: 470px; }
+      .footer-cta .btn { width: 100%; }
+    }
+
+    @media (max-width: 620px) {
+      .page { width: min(100% - 28px, 1380px); padding-top: 12px; }
+      .screening-bar { align-items: flex-start; top: 8px; border-radius: 16px; padding: 9px; }
+      .bar-actions .pill { display: none; }
+      .brand b { font-size: 12px; letter-spacing: .05em; }
+      .brand span { font-size: 11px; }
+      .mark { width: 32px; height: 32px; border-radius: 11px; }
+      .bar-actions .btn { min-height: 38px; padding: 0 11px; font-size: 12px; border-radius: 12px; }
+      .hero { padding-top: 24px; gap: 22px; }
+      .logo-lockup img { width: min(230px, 72vw); }
+      .eyebrow { font-size: 10px; letter-spacing: .14em; margin-bottom: 16px; }
+      h1 { font-size: 30px; line-height: 1.04; letter-spacing: -.025em; margin-bottom: 16px; }
+      .lead { font-size: 14px; line-height: 1.5; margin-bottom: 22px; }
+      .client-card { padding: 14px; border-radius: 18px; margin: 20px 0; }
+      .client-card span { font-size: 13px; }
+      .btn { min-height: 44px; border-radius: 13px; }
+      .hero-actions, .flow, .score-grid { grid-template-columns: 1fr; display: grid; }
+      .hero-actions .btn { width: 100%; }
+      .demo-frame, .demo-frame img { min-height: 440px; height: 440px; }
+      .play { width: 72px; height: 72px; }
+      .flow { grid-template-columns: repeat(2, 1fr); }
+      .demo-panel { left: 14px; right: 14px; bottom: 14px; padding: 16px; border-radius: 20px; }
+      .demo-panel h2 { font-size: 20px; }
+      .demo-panel p { font-size: 14px; }
+      .panel { border-radius: 22px; }
+      .panel h2 { font-size: 24px; line-height: 1.04; }
+      .footer-cta { border-radius: 24px; }
+      .contact-strip { display: grid; }
+      .modal { padding: 14px; }
+      .modal-head { padding: 20px 18px 0; }
+      .review-form { padding: 18px; }
+      .form-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="screening-bar">
+      <div class="brand">
+        <div class="mark">A</div>
+        <div>
+          <b>Private Screening Room</b>
+          <span>Prepared by AI Fusion Labs</span>
+        </div>
+      </div>
+      <div class="bar-actions">
+        <span class="pill">Unlisted demo room</span>
+        <a class="btn primary" href="https://xagent.aifusionlabs.app/demo/amy?returnUrl=https%3A%2F%2Finsight-amy-a.vercel.app%2F">Review Amy</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="logo-lockup">
+          <img src="./assets/insight-logo.png" alt="Insight logo" />
+        </div>
+        <div class="eyebrow">Prepared for Insight Enterprises</div>
+        <h1>Meet Amy, a general SDR-style X Agent built for first-pass discovery and qualified handoff.</h1>
+        <p class="lead">Amy is designed to show how Insight could respond to inbound interest, understand the shape of a prospect's need, capture BANT-style qualification details, and route opportunities to the right sales or specialist team without forcing every early conversation onto a human SDR.</p>
+
+        <div class="client-card">
+          <div>
+            <b>Spec X Agent: Amy</b>
+            <span>Built around consultative discovery, public sector routing signals, solution-area triage, meeting readiness, and sales handoff. This version runs on the newer Anam implementation.</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="https://xagent.aifusionlabs.app/demo/amy?returnUrl=https%3A%2F%2Finsight-amy-a.vercel.app%2F">Review Amy</a>
+          <a class="btn" href="#test">What to test</a>
+          <button class="btn dark" type="button" data-open-review>Send review notes</button>
+        </div>
+
+        <p class="confidential">Private preview page. This concept is unlisted and intended only for Insight leadership or reviewers evaluating Amy's proposed SDR workflow.</p>
+      </div>
+
+      <div class="demo-frame">
+        <img src="./assets/amy-insight-sdr.jpg" alt="Amy Insight SDR private demo preview" />
+        <a class="play" aria-label="Launch Amy private demo" href="https://xagent.aifusionlabs.app/demo/amy?returnUrl=https%3A%2F%2Finsight-amy-a.vercel.app%2F">&#9654;</a>
+        <div class="demo-panel">
+          <h2>Private Amy demo</h2>
+          <p>Simulate an inbound prospect asking about services, modernization, AI, security, public sector procurement, or routing to a specialist.</p>
+          <div class="flow">
+            <div>Prospect need</div>
+            <div>Discovery</div>
+            <div>Qualification</div>
+            <div>Team routing</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sections">
+      <div class="panel">
+        <h2>What Amy is designed to handle</h2>
+        <p>Amy is framed as a general SDR, not a closer. Her job is to make early conversations more consistent, useful, and ready for the right human handoff.</p>
+
+        <div class="checklist">
+          <div class="check">
+            <i>&#10003;</i>
+            <div><b>Consultative discovery</b><span>Captures role, organization type, need, urgency, decision path, and next-step readiness in a conversational way.</span></div>
+          </div>
+          <div class="check">
+            <i>&#10003;</i>
+            <div><b>Routing intelligence</b><span>Identifies when a prospect sounds like public sector, AI, cloud, security, solutions architecture, or account-exec follow-up.</span></div>
+          </div>
+          <div class="check">
+            <i>&#10003;</i>
+            <div><b>Sales-ready handoff</b><span>Creates cleaner context for the team before a call: what the prospect needs, what they asked, and where the opportunity should go.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="test" class="panel">
+        <h2>What to test</h2>
+        <p>Try realistic prospect questions. The strongest signal is whether Amy gathers useful context without sounding like she is reading a form.</p>
+
+        <div class="score-grid">
+          <div class="score"><b>01</b><span>We need help modernizing endpoint refresh for a distributed team.</span></div>
+          <div class="score"><b>02</b><span>Can Insight help us scope an AI or Copilot pilot?</span></div>
+          <div class="score"><b>03</b><span>We are a public sector agency. Who should we talk to?</span></div>
+          <div class="score"><b>04</b><span>How would this get routed to the right specialist?</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="next" class="footer-cta">
+      <div>
+        <h2>Ready to refine Amy for Insight review?</h2>
+        <p>Send feedback, flag missing Insight context, or request a short review discussion with AI Fusion Labs.</p>
+        <div class="contact-strip" aria-label="Private follow-up options">
+          <button class="contact-chip" type="button" data-open-review>Email AI Fusion Labs</button>
+          <button class="contact-chip" type="button" data-open-review>Send Amy feedback</button>
+        </div>
+      </div>
+      <button class="btn dark" type="button" data-open-review>Send review notes</button>
+    </section>
+  </main>
+
+  <div class="modal" id="review-modal" role="dialog" aria-modal="true" aria-labelledby="review-title">
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <div class="modal-kicker">Private review request</div>
+          <h2 id="review-title">Send Amy review notes</h2>
+          <p>Share contact details and feedback for Amy. AI Fusion Labs will follow up directly with next steps.</p>
+        </div>
+        <button class="modal-close" type="button" aria-label="Close review form" data-close-review>&times;</button>
+      </div>
+
+      <form class="review-form" id="review-form">
+        <div class="form-grid">
+          <div class="field">
+            <label for="review-name">Name</label>
+            <input id="review-name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="review-email">Email</label>
+            <input id="review-email" name="email" type="email" autocomplete="email" required value="Talal.khan@insight.com" />
+          </div>
+          <div class="field full">
+            <label for="review-company">Company / Role</label>
+            <input id="review-company" name="company" type="text" autocomplete="organization" required value="Insight Enterprises / Reviewer" />
+          </div>
+          <div class="field full">
+            <label for="review-usecase">Primary Use Case</label>
+            <select id="review-usecase" name="useCase" required>
+              <option value="Amy SDR Review">Amy SDR review</option>
+              <option value="Inbound Discovery">Inbound discovery</option>
+              <option value="Public Sector Routing">Public sector routing</option>
+              <option value="AI / Cloud / Security Specialist Routing">AI, cloud, or security routing</option>
+              <option value="Sales Handoff Workflow">Sales handoff workflow</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="review-notes">Notes</label>
+            <textarea id="review-notes" name="notes" placeholder="What should Amy know, avoid, ask differently, or hand off to the team?"></textarea>
+          </div>
+        </div>
+
+        <div class="form-status" id="review-status" aria-live="polite"></div>
+        <button class="btn primary" type="submit">Send review request</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('review-modal');
+    const form = document.getElementById('review-form');
+    const statusEl = document.getElementById('review-status');
+    const openButtons = document.querySelectorAll('[data-open-review]');
+    const closeButtons = document.querySelectorAll('[data-close-review]');
+
+    function openReviewForm() {
+      modal.classList.add('is-open');
+      statusEl.textContent = '';
+      statusEl.className = 'form-status';
+      document.getElementById('review-name').focus();
+    }
+
+    function closeReviewForm() {
+      modal.classList.remove('is-open');
+    }
+
+    openButtons.forEach((button) => button.addEventListener('click', openReviewForm));
+    closeButtons.forEach((button) => button.addEventListener('click', closeReviewForm));
+
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) closeReviewForm();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && modal.classList.contains('is-open')) closeReviewForm();
+    });
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      statusEl.textContent = 'Sending review request...';
+      statusEl.className = 'form-status';
+
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+
+      try {
+        const response = await fetch('/api/review-request', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        if (!response.ok) throw new Error('Request failed');
+
+        form.reset();
+        document.getElementById('review-email').value = 'Talal.khan@insight.com';
+        document.getElementById('review-company').value = 'Insight Enterprises / Reviewer';
+        statusEl.textContent = 'Review request sent. AI Fusion Labs will follow up directly.';
+        statusEl.className = 'form-status success';
+      } catch {
+        statusEl.textContent = 'Could not send yet. Please try again in a moment.';
+        statusEl.className = 'form-status error';
+      }
+    });
+  </script>
+</body>
+</html>
