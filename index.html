@@ -59,9 +59,9 @@
 
     .page {
       position: relative;
-      width: min(1120px, calc(100% - 44px));
+      width: min(1180px, calc(100% - 44px));
       margin: 0 auto;
-      padding: 28px 0 34px;
+      padding: 30px 0 34px;
     }
 
     .brand {
@@ -167,8 +167,8 @@
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, .88fr) minmax(360px, 1.12fr);
-      gap: clamp(22px, 3vw, 36px);
+      grid-template-columns: minmax(0, .82fr) minmax(460px, 1.18fr);
+      gap: clamp(28px, 3.6vw, 48px);
       align-items: start;
       padding: 0 0 22px;
     }
@@ -177,11 +177,12 @@
       display: flex;
       align-items: center;
       gap: 14px;
-      margin-bottom: 17px;
+      justify-content: flex-start;
+      margin-bottom: 28px;
     }
 
     .logo-lockup img {
-      width: min(230px, 58vw);
+      width: min(170px, 42vw);
       height: auto;
       filter: brightness(0) invert(1) drop-shadow(0 14px 24px rgba(0, 0, 0, .28));
     }
@@ -209,7 +210,7 @@
 
     h1 {
       color: white;
-      font-size: clamp(30px, 3.2vw, 43px);
+      font-size: clamp(30px, 3.05vw, 44px);
       line-height: 1;
       letter-spacing: -.038em;
       margin-bottom: 15px;
@@ -264,8 +265,8 @@
 
     .demo-frame {
       position: relative;
-      min-height: 360px;
-      max-height: 440px;
+      min-height: 440px;
+      max-height: 540px;
       border-radius: 22px;
       overflow: hidden;
       border: 1px solid rgba(255, 255, 255, .16);
@@ -275,7 +276,7 @@
 
     .demo-frame img {
       width: 100%;
-      height: clamp(360px, 42vh, 440px);
+      height: clamp(440px, 52vh, 540px);
       object-fit: cover;
       object-position: center 39%;
       filter: saturate(.96) contrast(1.02);
@@ -315,8 +316,8 @@
       z-index: 2;
       left: 14px;
       right: auto;
-      bottom: 14px;
-      width: min(360px, calc(100% - 28px));
+      bottom: 16px;
+      width: min(410px, calc(100% - 28px));
       padding: 11px 12px;
       border-radius: 14px;
       border: 1px solid rgba(255, 255, 255, .1);
@@ -605,13 +606,14 @@
     @media (max-width: 980px) {
       .hero, .sections, .footer-cta { grid-template-columns: 1fr; }
       .demo-frame, .demo-frame img { min-height: 470px; height: 470px; }
+      .logo-lockup { margin-bottom: 20px; }
       .footer-cta .btn { width: 100%; }
     }
 
     @media (max-width: 620px) {
       .page { width: min(100% - 28px, 1380px); padding-top: 18px; }
       .hero { gap: 22px; }
-      .logo-lockup img { width: min(230px, 72vw); }
+      .logo-lockup img { width: min(155px, 62vw); }
       .eyebrow { font-size: 10px; letter-spacing: .14em; margin-bottom: 16px; }
       h1 { font-size: 30px; line-height: 1.04; letter-spacing: -.025em; margin-bottom: 16px; }
       .lead { font-size: 14px; line-height: 1.5; margin-bottom: 22px; }
